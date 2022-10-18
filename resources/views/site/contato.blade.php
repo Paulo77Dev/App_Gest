@@ -1,15 +1,15 @@
 <h3>Contato</h3>
 <ul>
         <li>
-       <a href="/"> Principal</a>
+       <a href="{{'site.index'}}"> Principal </a>
         </li>
 
         <li>
-       <a href="/contato"> Contatos</a>
+       <a href=" {{'site.icontato'}}"> Contatos</a>
         </li>
 
         <li>
-       <a href="/sobre-nos"> Sobre - nós</a>
+       <a href=" {{'site.sobrenos'}}"> Sobre - nós</a>
         </li>
 
 </ul>
