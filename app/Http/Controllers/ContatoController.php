@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class contatoController extends Controller
+class ContatoController extends Controller
 {
-    public function contato(){
-        echo 'Contato';
+    public function contato()
+    {
+        echo 'Contatos';
     }
 }
