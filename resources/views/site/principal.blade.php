@@ -6,7 +6,7 @@
         </li>
 
         <li>
-       <a href=" {{route ('site.icontato')}}"> Contatos</a>
+       <a href=" {{route ('site.contato')}}"> Contatos</a>
         </li>
 
         <li>
