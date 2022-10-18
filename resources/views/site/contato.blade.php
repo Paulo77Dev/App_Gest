@@ -9,7 +9,7 @@
         </li>
 
         <li>
-       <a href="/sobre-nos"> Sobre - nósl</a>
+       <a href="/sobre-nos"> Sobre - nós</a>
         </li>
 
 </ul>
