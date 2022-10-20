@@ -161,7 +161,7 @@ Status: {{ $fornecedores[0]['status'] }}
         <hr>
     @endforeach
 @endisset
---}}
+----------------------------------------------------------------------------------------------------
 @endphp
 @isset($fornecedores)
 
@@ -178,5 +178,23 @@ Status: {{ $fornecedores[0]['status'] }}
         Não existem fornecedores cadastrados!!!
     @endforelse
 @endisset
+-------------------------------------------------------------------------------------------------------
+--}}
+@endphp
 
+@isset($fornecedores)
+
+    @forelse($fornecedores as $indice => $fornecedor)
+        Fornecedor: @{{ $fornecedor['nome'] }}
+        <br>
+        Status: @{{ $fornecedor['status'] }}
+        <br>
+        CNPJ: @{{ $fornecedor['cnpj'] ?? '' }}
+        <br>
+        Telefone: (@{{ $fornecedor['ddd'] ?? '' }}) @{{ $fornecedor['telefone'] ?? '' }}
+        <hr>
+    @empty
+        Não existem fornecedores cadastrados!!!
+    @endforelse
+@endisset
 
