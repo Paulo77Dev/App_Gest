@@ -109,9 +109,6 @@ Status: {{ $fornecedores[0]['status'] }}
     -->
 @endisset
 -----------------------------------------------------------------------
-
---}}
-
 @endphp
 
 @isset($fornecedores)
@@ -135,4 +132,19 @@ Status: {{ $fornecedores[0]['status'] }}
         @default
             Estado não indentificado
     @endswitch
+@endisset
+--}}
+@endphp
+
+@isset($fornecedores)
+    @for($i = 0; isset($fornecedores[$i]); $i++)
+        Fornecedor: {{ $fornecedores[$i]['nome'] }}
+        <br>
+        Status: {{ $fornecedores[$i]['status'] }}
+        <br>
+        CNPJ: {{ $fornecedores[$i]['cnpj'] ?? '' }}
+        <br>
+        Telefone: ({{ $fornecedores[$i]['ddd'] ?? '' }}) {{ $fornecedores[$i]['telefone'] ?? '' }}
+        <hr>
+    @endfor
 @endisset
