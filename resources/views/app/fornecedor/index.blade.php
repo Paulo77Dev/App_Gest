@@ -198,7 +198,6 @@ Status: {{ $fornecedores[0]['status'] }}
 @endisset
 
 --}}
-@endphp
 
 @isset($fornecedores)
 
