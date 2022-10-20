@@ -133,7 +133,7 @@ Status: {{ $fornecedores[0]['status'] }}
             Estado não indentificado
     @endswitch
 @endisset
---}}
+---------------------------------------------------------------------------------
 @endphp
 
 @isset($fornecedores)
@@ -147,4 +147,20 @@ Status: {{ $fornecedores[0]['status'] }}
         Telefone: ({{ $fornecedores[$i]['ddd'] ?? '' }}) {{ $fornecedores[$i]['telefone'] ?? '' }}
         <hr>
     @endfor
+@endisset
+--}}
+@endphp
+
+@isset($fornecedores)
+
+    @foreach($fornecedores as $indice => $fornecedor)
+        Fornecedor: {{ $fornecedor['nome'] }}
+        <br>
+        Status: {{ $fornecedor['status'] }}
+        <br>
+        CNPJ: {{ $fornecedor['cnpj'] ?? '' }}
+        <br>
+        Telefone: ({{ $fornecedor['ddd'] ?? '' }}) {{ $fornecedor['telefone'] ?? '' }}
+        <hr>
+    @endforeach
 @endisset
