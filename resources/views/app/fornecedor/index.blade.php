@@ -21,6 +21,18 @@
      /*
     if(!condicao) {} //enquanto executa se o retorno for true
     */
+
+        /*
+    if(empty($variavel)) {} //retornar true se a variável estiver vazia
+    - ''
+    - 0
+    - 0.0
+    - '0'
+    - null
+    - false
+    - array()
+    - $var
+    */
 @endphp
 {{-- usando IF E ELSE  no blade --}}
 
@@ -48,7 +60,20 @@ Status: {{ $fornecedores[0]['status'] }}
 @endunless
 <br>
 --}}
+{{--
+@isset($fornecedores)
+    Fornecedor: {{ $fornecedores[0]['nome'] }}
+    <br>
+    Status: {{ $fornecedores[0]['status'] }}
+    <br>
+    @isset($fornecedores[0]['cnpj'])
+        CNPJ: {{ $fornecedores[0]['cnpj'] }}
+    @endisset
+@endisset
+--}}
 
+
+@endphp
 
 @isset($fornecedores)
     Fornecedor: {{ $fornecedores[0]['nome'] }}
@@ -57,5 +82,8 @@ Status: {{ $fornecedores[0]['status'] }}
     <br>
     @isset($fornecedores[0]['cnpj'])
         CNPJ: {{ $fornecedores[0]['cnpj'] }}
+        @empty($fornecedores[0]['cnpj'])
+            - Vazio
+        @endempty
     @endisset
 @endisset
