@@ -50,7 +50,6 @@ class FornecedorController extends Controller
             ]
         ];
 */
-
         $fornecedores = [
             0 => [
                 'nome' => 'Fornecedor 1',
