@@ -37,6 +37,19 @@ class FornecedorController extends Controller
             ]
         ];
  */
+        /*
+        $fornecedores = [
+            0 => [
+                'nome' => 'Fornecedor 1',
+                'status' => 'N',
+                'cnpj' => '00'
+            ],
+            1 => [
+                'nome' => 'Fornecedor 2',
+                'status' => 'S'
+            ]
+        ];
+*/
 
         $fornecedores = [
             0 => [
@@ -49,6 +62,13 @@ class FornecedorController extends Controller
                 'status' => 'S'
             ]
         ];
+
+        /*
+        condicao ? se verdade : se falso;
+        condicao ? se verdade : (condicao ? se verdade : se falso);
+        */
+        $msg = isset($fornecedores[0]['cnpj']) ? 'CNPJ informado' : 'CNPJ não informado';
+        echo $msg;
 
         return view('app.fornecedor.index', compact('fornecedores'));
     }
