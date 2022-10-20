@@ -50,7 +50,7 @@ class FornecedorController extends Controller
             ]
         ];
 */
-        $fornecedores = [
+       /* $fornecedores = [
             0 => [
                 'nome' => 'Fornecedor 1',
                 'status' => 'N',
@@ -65,9 +65,22 @@ class FornecedorController extends Controller
         /*
         condicao ? se verdade : se falso;
         condicao ? se verdade : (condicao ? se verdade : se falso);
-        */
+
         $msg = isset($fornecedores[0]['cnpj']) ? 'CNPJ informado' : 'CNPJ não informado';
         echo $msg;
+*/
+        $fornecedores = [
+            0 => [
+                'nome' => 'Fornecedor 1',
+                'status' => 'N',
+                'cnpj' => '0'
+            ],
+            1 => [
+                'nome' => 'Fornecedor 2',
+                'status' => 'S',
+                'cnpj' => null
+            ]
+        ];
 
         return view('app.fornecedor.index', compact('fornecedores'));
     }
