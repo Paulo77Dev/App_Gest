@@ -1,15 +1,15 @@
 <h3>Fornecedor</h3>
 
-{{'oiii paulo'}}
+{{ 'Texto de teste' }}
+<?= 'Texto de teste' ?>
 
-<?= 'oiii paulo' ?>
-{{--parte de comentarios de codigo no blade--}}
+{{-- Fica o comentário que será descartado pelo interpretador do blade --}}
 
 @php
-//para comentarios de codigo curto
-/*para comentários de paragrafos
+    // Para comentários de uma linha
+    /*
+        Para comentários de multiplas linhas
+    */
 
-*/
-echo 'oii palulo';
-
+    echo 'Texto de teste';
 @endphp
