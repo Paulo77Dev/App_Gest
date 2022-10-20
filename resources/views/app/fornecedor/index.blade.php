@@ -11,14 +11,10 @@
         Para comentários de multiplas linhas
     */
    // echo 'Texto de teste';
-
     /*
     if() {
-
     } elseif() {
-
     } else {
-
     }
     */
 
@@ -37,6 +33,8 @@
     <h3>Ainda não existem fornecedores cadastrados</h3>
 @endif
 --}}
+
+{{--
 Fornecedor: {{ $fornecedores[0]['nome'] }}
 <br>
 Status: {{ $fornecedores[0]['status'] }}
@@ -49,3 +47,15 @@ Status: {{ $fornecedores[0]['status'] }}
     Fornecedor inativo
 @endunless
 <br>
+--}}
+
+
+@isset($fornecedores)
+    Fornecedor: {{ $fornecedores[0]['nome'] }}
+    <br>
+    Status: {{ $fornecedores[0]['status'] }}
+    <br>
+    @isset($fornecedores[0]['cnpj'])
+        CNPJ: {{ $fornecedores[0]['cnpj'] }}
+    @endisset
+@endisset
