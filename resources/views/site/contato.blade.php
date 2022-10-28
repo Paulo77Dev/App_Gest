@@ -11,8 +11,11 @@
         <div class="informacao-pagina">
             <div class="contato-principal">
 
-               @component('site.layouts._components.form_contato')
-               @endcomponent
+                @component('site.layouts._components.form_contato')
+                    <p> Analisaremos e retornaremos assim que possivel</p>
+                    <p> responderemos dentro de algumas horas
+                    <p>
+                    @endcomponent
 
             </div>
         </div>
