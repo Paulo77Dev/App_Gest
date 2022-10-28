@@ -10,8 +10,10 @@
 
         <div class="informacao-pagina">
             <div class="contato-principal">
-               @componet('site.layouts._components>form.contato')
+
+               @component('site.layouts._components.form_contato')
                @endcomponent
+
             </div>
         </div>
     </div>
