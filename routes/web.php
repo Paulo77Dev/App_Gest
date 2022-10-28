@@ -19,6 +19,7 @@ Route::get('/sobre-nos', 'App\Http\Controllers\SobreNosController@sobreNos')->na
 //ROTAS NORMAIS NO CODIGO NO MENU DE OPÇÕES
 
 Route::get('/contato', 'App\Http\Controllers\ContatoController@contato')->name('site.contato');
+Route::post('/contato', 'App\Http\Controllers\ContatoController@contato')->name('site.contato');
 //ROTAS NORMAIS NO CODIGO NO MENU DE OPÇÕES
 
 Route::get('/login', function () {return 'Login';})->name('site.login');
