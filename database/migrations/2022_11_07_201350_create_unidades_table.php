@@ -15,8 +15,22 @@ return new class extends Migration
     {
         Schema::create('unidades', function (Blueprint $table) {
             $table->id();
+            $table->string('unidade', 5); //cm mm kg
+            $table->string('descricao', 30);
             $table->timestamps();
         });
+        //adicionr o relacionamento da tabela produtos
+        Schema::create('produtos', function (Blueprint $table) {
+            $table->unsignedBigInteger('unidade_id'); //
+            $table->foreign('unidade_id')->references('id')->on('unidades');
+        });
+
+        //adicionr o relacionamento da tabela produtos_detalhes
+        Schema::create('produto_detalhes', function (Blueprint $table) {
+            $table->unsignedBigInteger('unidade_id'); //
+            $table->foreign('unidade_id')->references('id')->on('unidades');
+        });
+
     }
 
     /**
