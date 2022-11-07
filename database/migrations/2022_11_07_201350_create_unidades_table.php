@@ -19,13 +19,13 @@ return new class extends Migration
             $table->string('descricao', 30);
             $table->timestamps();
         });
-        //adicionr o relacionamento da tabela produtos
+        //adicionar o relacionamento da tabela produtos
         Schema::create('produtos', function (Blueprint $table) {
             $table->unsignedBigInteger('unidade_id'); //
             $table->foreign('unidade_id')->references('id')->on('unidades');
         });
 
-        //adicionr o relacionamento da tabela produtos_detalhes
+        //adicionar o relacionamento da tabela produtos_detalhes
         Schema::create('produto_detalhes', function (Blueprint $table) {
             $table->unsignedBigInteger('unidade_id'); //
             $table->foreign('unidade_id')->references('id')->on('unidades');
@@ -41,5 +41,11 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('unidades');
+                //adicionar o relacionamento da tabela produtos
+
+
+
+                //adicionar o relacionamento da tabela produtos_detalhes
+
     }
 };
